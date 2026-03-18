@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>El Viaje del Héroe: El Despertar</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <h1>El Despertar de los Sakura Brothers</h1>
+
+    <div id="marcador" style="font-size: 20px; font-weight: bold">
+      Puntos: 0
+    </div>
+
+    <input type="button" value="Añadir Personaje" onclick="añadirCocinero()" />
+    <input
+      type="button"
+      value="Añadir Obstaculos"
+      onclick="añadirObstaculos()"
+    />
+    <input type="button" value="Añadir Sushi" onclick="añadirComida()" />
+    <input
+      type="button"
+      value="Picar"
+      id="botonPicar"
+      disabled
+      onclick="picar()"
+    />
+    <input type="button" value="Inspeccionar" onclick="inspeccionar()" />
+    <label>
+      <input type="checkbox" id="recuperarFrases" />
+      Recuperar frases del personaje
+    </label>
+    <br /><br />
+
+    <div id="contenedor">
+      <div id="escenario"></div>
+      <div id="panel">
+        <h3>Inspección</h3>
+        <div id="inspeccionContenido">
+          Selecciona un personaje y pulsa "Inspeccionar"
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

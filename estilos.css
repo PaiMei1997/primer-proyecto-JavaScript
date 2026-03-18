@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f1e8;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+    color:#bfa27a;
+}
+#contenedor {
+  display: flex;
+  height: 600px;
+  gap: 250px;
+}
+
+#escenario {
+  width: 800px;
+  height: 600px;
+  left: 200px;
+  border: 3px solid #bfa27a; 
+  position: relative;
+  overflow: hidden;
+  background-image: url("src/cocina.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 25px rgba(0,0,0,0.25);
+  border-radius: 6px;
+}
+
+.personaje {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.personaje:hover {
+  transform: scale(1.12);
+}
+
+.seleccionado {
+  outline: 3px solid #ffd86b;
+  border-radius: 4px;
+}
+.obstaculo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+#panel {
+  width: 250px;
+  height: 600px;
+  margin-left: 10px;
+  background: #f7efe0; 
+  border: 3px solid #bfa27a;
+  border-radius: 6px;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.15);
+  padding: 10px;
+}
+
+#panel h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #5a4632;
+  border-bottom: 2px solid #c7b08a;
+  padding-bottom: 5px;
+}
+
+#inspeccionContenido {
+  white-space: pre-wrap;
+  background: #fffdf8;
+  border: 1px solid #d8c7a6;
+  padding: 10px;
+  height: 500px;
+  overflow-y: auto;
+
+  border-radius: 6px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+}
+
+input[type="button"],
+button {
+  background: #d4a373;             
+  border: 2px solid #b58a5c;         
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #fffdf8;                    
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input[type="button"]:not(:disabled):hover,
+button {
+  background: #b88352;             
+  transform: translateY(-2px);       
+  box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+}
+
+input[type="button"]:active,
+button {
+  background: #a06d3f;
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+input[type="button"]:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+label {
+  color: #5a4632;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #b88352; 
+}
